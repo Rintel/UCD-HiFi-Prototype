@@ -8,3 +8,7 @@ You find our Figma File [here](https://www.figma.com/file/aYNJ5RVbsFATvsvq8YMGv9
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
+### current status
+![Current Version](https://i.ibb.co/4Np9QTh/Screenshot-2019-06-10-00-33-52.png)
