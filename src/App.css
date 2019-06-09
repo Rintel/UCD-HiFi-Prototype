@@ -1,0 +1,9 @@
+.IDEContainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./images/saros_screenshot.PNG');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
