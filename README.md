@@ -1,5 +1,3 @@
-### UCD HiFi Project
-
 ### UCD HiFi Project - Distributed Project Integration
 
 This is a HiFi Prototype for the course User Centered Design - SS 2019. 
