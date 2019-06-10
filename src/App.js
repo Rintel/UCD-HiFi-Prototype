@@ -1,15 +1,75 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Terminal from 'terminal-in-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'semantic-ui-css/semantic.min.css';
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
-import { Dropdown } from 'semantic-ui-react'
+import { faPlay, faPlus, faSync, faTrash, faCopy, faPaste, faCut } from '@fortawesome/free-solid-svg-icons'
+import { Dropdown, Button } from 'semantic-ui-react'
+
+import SortableTree from 'react-sortable-tree';
+import FileExplorerTheme from 'react-sortable-tree-theme-file-explorer';
 
 import './App.css'
 
 import logo from './images/saros_logo.png'
 
-const App = () => {
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      treeData: [
+        {           
+          title: 'root',
+          isDirectory: true,
+          expanded: true,
+          children: [
+        { title: '.gitignore' },
+        { title: 'package.json' },
+        {
+          title: 'src',
+          isDirectory: true,
+          expanded: true,
+          children: [
+            { title: 'styles.css' },
+            { title: 'index.js' },
+            { title: 'reducers.js' },
+            { title: 'actions.js' },
+            { title: 'utils.js' },
+            { title: 'reducers.js' },
+            { title: 'actions.js' },
+            { title: 'utils.js' },
+          ],
+        },
+        {
+          title: 'tmp',
+          isDirectory: true,
+          children: [
+            { title: '12214124-log' },
+            { title: 'drag-disabled-file', dragDisabled: true },
+          ],
+        },
+        {
+          title: 'build',
+          isDirectory: true,
+          children: [{ title: 'react-sortable-tree.js' }],
+        },
+        {
+          title: 'public',
+          isDirectory: true,
+        },
+        {
+          title: 'node_modules',
+          isDirectory: true,
+        },
+      ]}],
+    };
+  }
+
+  render() {
+
+    const doSomething = () => alert("Compiled!");
+    const authors = () => "Cedric, Ben and Mahmoud are the awesome creators";
+    
     return (
       <div className="App">
         <div className="Menu">
@@ -36,14 +96,35 @@ const App = () => {
           </Dropdown>
         </div>
         <div className="SecondaryMenu">
-          <button className="SecondaryMenu--Button SecondaryMenu--Button-blue">
+          <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
             <FontAwesomeIcon icon={faPlay} />
-          </button>
-          {/* This is reserved for Icons */}
+          </Button>
+          <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+            <FontAwesomeIcon icon={faPlus} />
+          </Button>
+          <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={() => window.location.reload()}>
+            <FontAwesomeIcon icon={faSync} />
+          </Button>
+          <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+            <FontAwesomeIcon icon={faTrash} />
+          </Button>
+          <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+            <FontAwesomeIcon icon={faCopy} />
+          </Button>
+          <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+            <FontAwesomeIcon icon={faPaste} />
+          </Button>
+          <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+            <FontAwesomeIcon icon={faCut} />
+          </Button>
         </div>
         <div className="Content">
           <div className="ProjectExplorer">
-            {/* This is reserved for the File Explorer */}
+            <SortableTree
+            treeData={this.state.treeData}
+            onChange={treeData => this.setState({ treeData })}
+            theme={FileExplorerTheme}
+          />
           </div>
           <div className="TextEditor">
             {/* This is reserved for the Editor */}
@@ -56,16 +137,23 @@ const App = () => {
               color='white'
               backgroundColor='#292C2F'
               barColor='black'
-              style={{fontWeight: "bold", fontSize: "1em" }}
+              style={{fontFamily: "sans-serif", fontSize: "1em" }}
               commands={{
                 'open-google': () => window.open('https://www.google.com/', '_blank'),
+                'hey': () => alert("Hey, what's up?"),
+                authors: authors,
               }}
-              descriptions={{'open-google': 'opens google.com'}}
+              descriptions={{
+                'open-google': 'opens google.com',
+                'hey': 'Greets you hehe',
+                'authors': "Displays the names of the great creators of this project" 
+              }}
               msg='Willkommen beim Saros Web IDE.'
             />
         </div>
       </div>
     );
+  }
 }
 
 export default App;
