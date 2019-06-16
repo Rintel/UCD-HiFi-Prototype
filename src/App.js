@@ -17,6 +17,7 @@ class App extends Component {
     super(props);
 
     this.state = {
+      modalVisible: true,
       treeData: [
         {           
           title: 'root',
@@ -69,17 +70,40 @@ class App extends Component {
 
     const doSomething = () => alert("Compiled!");
     const authors = () => "Cedric, Ben and Mahmoud are the awesome creators";
+    const toggleModal = () => {
+      this.setState({
+        modalVisible: !this.state.modalVisible
+      });
+    }
     
     return (
       <div className="App">
+        {this.state.modalVisible && (
+            <div className="MergeProjectModal">
+              <div className="MergeProjectHeader">
+                <div className="MergeProjectHeader--Text">Merge Projects</div>
+                <div className="MergeProjectHeader--CloseButton" onClick={toggleModal}>X</div>
+              </div>
+              <div className="MergeProjectContent">
+                <p>Select the project you want to work on. </p>
+              </div>
+              <div className="MergeProjectControlBar">
+                <button className="MergeProjectControlBar--Button">Back</button>
+                <button className="MergeProjectControlBar--Button">Next</button>
+                <button className="MergeProjectControlBar--Button">Finish</button>
+                <button className="MergeProjectControlBar--Button">Cancel</button>
+              </div>
+            </div>
+        )}
         <div className="Menu">
           <img className="SarosMenu--Logo " alt="Saros Menu Logo" src={logo} />
           <button className="Menu--Entries">File</button>
-          <button className="Menu--Entries">Code</button>
-          <button className="Menu--Entries">Build</button>
-          <button className="Menu--Entries">Run</button>
-          <button className="Menu--Entries">Deploy</button>
-          <button className="Menu--Entries">Window</button>
+          <button className="Menu--Entries">Edit</button>
+          <button className="Menu--Entries">Source</button>
+          <button className="Menu--Entries">Refactor</button>
+          <button className="Menu--Entries">Navigage</button>
+          <button className="Menu--Entries">Search</button>
+          <button className="Menu--Entries">Project</button>
           <Dropdown item text='Saros'>
             <Dropdown.Menu>
               <Dropdown.Item>Getting Started</Dropdown.Item>
@@ -90,10 +114,14 @@ class App extends Component {
               <Dropdown.Item>Add Contact...</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item>Share Project(s)...</Dropdown.Item>
+              <Dropdown.Item onClick={toggleModal}>Merge Project(s)...</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item>Preferences...</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+          <button className="Menu--Entries">Run</button>
+          <button className="Menu--Entries">Window</button>
+          <button className="Menu--Entries">Help</button>
         </div>
         <div className="SecondaryMenu">
           <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
@@ -148,7 +176,7 @@ class App extends Component {
                 'hey': 'Greets you hehe',
                 'authors': "Displays the names of the great creators of this project" 
               }}
-              msg='Willkommen beim Saros Web IDE.'
+              msg='[INFO] Willkommen beim Saros Web IDE...'
             />
         </div>
       </div>
