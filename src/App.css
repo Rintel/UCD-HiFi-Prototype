@@ -62,7 +62,8 @@
 }
 
 .MergeProjectHeader {
-  background-color: white;
+  background-color: #2c3e50;
+  color: white;
   display: flex;
   height: 30px;
   justify-content: space-between;
@@ -81,26 +82,27 @@
 }
 
 .MergeProjectContent {
+  padding: 25px;
   color: white;
-  height: 300px;
+  height: 320px;
 }
 
 .MergeProjectControlBar {
-  height: 70px;
-  border-top: 1px solid white;
+  height: 50px;
+  border-top: 1px solid #2c3e50;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 15px;
+  padding: 0 5px 0 0;
 }
 
 .MergeProjectControlBar--Button {
+  background-color: transparent;
   width: 60px;
   height: 30px;
-  background-color: transparent;
   border: none;
   align-content: center;
-  margin: 10px;
+  margin: 15px;
   color: white;
 }
 
@@ -126,7 +128,7 @@
 .Content {
   height: calc(100vh - 280px);
   display: grid;
-  grid-template-columns: 20% 65% 15%;
+  grid-template-columns: 20% 60% 20%;
 }
 
 .ProjectExplorer {
@@ -183,8 +185,15 @@ i.dropdown.icon {
 }
 
 .TextEditor {
+  padding: 25px;
   background-color: #1C1F2B;
   border-right: 1px solid #2c3e50;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.CodeImage {
+  width: 70%;
 }
 
 .Window {
@@ -232,7 +241,8 @@ i.dropdown.icon {
 .iWWnLG {
   background-color: #1C1F2B  !important;
   border-bottom: 2px solid #1C1F2B  !important;
-  font-size: 0.7em !important;
+  font-size: 0.8em !important;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
 }
 
 .fSkAOT, .fSkAOT:focus {
@@ -250,6 +260,10 @@ i.dropdown.icon {
 
 .sc-cSHVUG.cFaXHK {
   background-color: #282b3a !important;
+}
+
+.ihWlDo {
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
 }
 
 

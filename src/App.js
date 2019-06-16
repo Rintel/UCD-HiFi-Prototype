@@ -10,7 +10,8 @@ import FileExplorerTheme from 'react-sortable-tree-theme-file-explorer';
 
 import './App.css'
 
-import logo from './images/saros_logo.png'
+import logo from './images/saros_logo.png';
+import codeImage from  './images/code.png';
 
 class App extends Component {
   constructor(props) {
@@ -101,7 +102,7 @@ class App extends Component {
           <button className="Menu--Entries">Edit</button>
           <button className="Menu--Entries">Source</button>
           <button className="Menu--Entries">Refactor</button>
-          <button className="Menu--Entries">Navigage</button>
+          <button className="Menu--Entries">Navigate</button>
           <button className="Menu--Entries">Search</button>
           <button className="Menu--Entries">Project</button>
           <Dropdown item text='Saros'>
@@ -155,7 +156,7 @@ class App extends Component {
           />
           </div>
           <div className="TextEditor">
-            {/* This is reserved for the Editor */}
+            <img className="CodeImage" alt="Some Java Code Text" src={codeImage} />
           </div>
           <div className="Window"></div>
         </div>
