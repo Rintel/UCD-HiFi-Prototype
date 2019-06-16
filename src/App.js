@@ -17,7 +17,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      modalVisible: true,
+      modalVisible: false,
       treeData: [
         {           
           title: 'root',
@@ -91,7 +91,7 @@ class App extends Component {
                 <button className="MergeProjectControlBar--Button">Back</button>
                 <button className="MergeProjectControlBar--Button">Next</button>
                 <button className="MergeProjectControlBar--Button">Finish</button>
-                <button className="MergeProjectControlBar--Button">Cancel</button>
+                <button onClick={toggleModal} className="MergeProjectControlBar--Button">Cancel</button>
               </div>
             </div>
         )}
