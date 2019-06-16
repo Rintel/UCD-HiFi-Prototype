@@ -18,11 +18,11 @@
 
 .Menu--Entries {
   color: rgba(190, 190, 190, 0.774);
-  margin: auto 0px auto 25px;
+  margin: auto 0px auto 15px;
   background-color: transparent;
   border: none;
   font-size: 1em;
-  width: 60px;
+  width: 70px;
 }
 
 .Menu--Entries:hover {
@@ -42,11 +42,67 @@
 .SecondaryMenu--Button {
   color: rgba(190, 190, 190, 0.774);
   margin-left: 25px;
-  margin: auto 0px auto 25px;
+  margin: auto 0px auto 15px;
   background-color: transparent;
   border: none;
   font-size: 1.2em;
-} 
+}
+
+.MergeProjectModal {
+  height: 400px;
+  width: 800px;
+  background-color:#282b3a;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.MergeProjectHeader {
+  background-color: white;
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.MergeProjectHeader--Text {
+  align-self: center;
+  display: flex;
+  margin-left: 15px;
+}
+
+.MergeProjectHeader--CloseButton {
+  height: 20px;
+  width: 20px;
+  align-self: center;
+}
+
+.MergeProjectContent {
+  color: white;
+  height: 300px;
+}
+
+.MergeProjectControlBar {
+  height: 70px;
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+}
+
+.MergeProjectControlBar--Button {
+  width: 60px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  align-content: center;
+  margin: 10px;
+  color: white;
+}
 
 .ui.button.SecondaryMenu--Button-blue {
   color: #4EABFF;
@@ -84,11 +140,11 @@
 }
 
 .ui.dropdown {
-  width: 60px;
+  width: 70px;
   font-size: 1.1em;
   text-align: end;
   margin-left: 25px;
-  margin: auto 0px auto 25px;
+  margin: auto 0px auto 5px;
   color: rgba(190, 190, 190, 0.774);
 }
 
