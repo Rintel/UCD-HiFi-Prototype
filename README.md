@@ -4,7 +4,7 @@
 
 This is a HiFi Prototype for the course User Centered Design - SS 2019. 
 
-This is our [Figma File](https://www.figma.com/file/aYNJ5RVbsFATvsvq8YMGv9x4/UCD-HiFi-Prototype?node-id=0%3A1)
+This is our [Figma File](https://www.figma.com/file/aeT01R0JNmnQ4fUab3mSfBNo/ucd-project-merge?node-id=0%3A1)
 
 #### Development
 
