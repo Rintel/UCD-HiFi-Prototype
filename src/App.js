@@ -12,6 +12,7 @@ import './App.css'
 
 import logo from './images/saros_logo.png';
 import codeImage from  './images/code.png';
+import cheatsheet from './images/cheatsheet.png';
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +20,8 @@ class App extends Component {
 
     this.state = {
       modalVisible: false,
+      image_counter: 0,
+      show_tooltip: false,
       treeData: [
         {           
           title: 'root',
@@ -71,14 +74,28 @@ class App extends Component {
 
     const doSomething = () => alert("Compiled!");
     const authors = () => "Cedric, Ben and Mahmoud are the awesome creators";
+    const nextImage = () => {
+      this.setState({
+        image_counter: this.state.image_counter + 1
+      });
+    }
+
+    const backImage = () => {
+      this.setState({
+        image_counter: this.state.image_counter - 1
+      });
+    }
+
     const toggleModal = () => {
       this.setState({
-        modalVisible: !this.state.modalVisible
+        modalVisible: !this.state.modalVisible,
+        show_tooltip: !this.state.show_tooltip
       });
     }
     
     return (
       <div className="App">
+        {console.log(this.state.image_counter)}
         {this.state.modalVisible && (
             <div className="MergeProjectModal">
               <div className="MergeProjectHeader">
@@ -86,11 +103,11 @@ class App extends Component {
                 <div className="MergeProjectHeader--CloseButton" onClick={toggleModal}>X</div>
               </div>
               <div className="MergeProjectContent">
-                <p>Select the project you want to work on. </p>
+                <img onClick={nextImage} className="CounterImageSize" src={`https://ucd-hifi-prototype.s3.eu-central-1.amazonaws.com/images/counter_${this.state.image_counter}.png`} alt="asdasd"></img>
               </div>
               <div className="MergeProjectControlBar">
-                <button className="MergeProjectControlBar--Button">Back</button>
-                <button className="MergeProjectControlBar--Button">Next</button>
+                <button onClick={backImage} className="MergeProjectControlBar--Button">Back</button>
+                <button className="MergeProjectControlBar--Button" onClick={nextImage}>Next</button>
                 <button className="MergeProjectControlBar--Button">Finish</button>
                 <button onClick={toggleModal} className="MergeProjectControlBar--Button">Cancel</button>
               </div>
@@ -158,7 +175,10 @@ class App extends Component {
           <div className="TextEditor">
             <img className="CodeImage" alt="Some Java Code Text" src={codeImage} />
           </div>
-          <div className="Window"></div>
+          <div className="Window">
+            {this.state.show_tooltip && (<img className="CheatsheetImage" src={cheatsheet}></img>)}
+            
+          </div>
         </div>
         <div className="Terminal--Container">
           <Terminal

@@ -82,7 +82,7 @@
 }
 
 .MergeProjectContent {
-  padding: 25px;
+  overflow: auto;
   color: white;
   height: 320px;
 }
@@ -94,6 +94,15 @@
   justify-content: flex-end;
   align-items: center;
   padding: 0 5px 0 0;
+}
+
+.CounterImageSize {
+  max-width: 790px;
+  min-width: 790px;
+}  
+
+.CheatsheetImage {
+  width: 100%;
 }
 
 .MergeProjectControlBar--Button {
@@ -197,6 +206,7 @@ i.dropdown.icon {
 }
 
 .Window {
+  overflow: auto;
   background-color: #1C1F2B;
 }
 
