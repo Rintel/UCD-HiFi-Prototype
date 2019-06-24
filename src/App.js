@@ -20,7 +20,7 @@ class App extends Component {
 
     this.state = {
       modalVisible: false,
-      image_counter: 0,
+      image_counter: 1,
       show_tooltip: false,
       treeData: [
         {           
@@ -89,7 +89,8 @@ class App extends Component {
     const toggleModal = () => {
       this.setState({
         modalVisible: !this.state.modalVisible,
-        show_tooltip: !this.state.show_tooltip
+        show_tooltip: !this.state.show_tooltip,
+        image_counter: 1
       });
     }
     

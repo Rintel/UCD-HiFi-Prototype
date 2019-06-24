@@ -49,7 +49,7 @@
 }
 
 .MergeProjectModal {
-  height: 400px;
+  height: 425px;
   width: 800px;
   background-color:#282b3a;
   position: fixed;
@@ -82,9 +82,10 @@
 }
 
 .MergeProjectContent {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   color: white;
-  height: 320px;
+  height: 345px;
 }
 
 .MergeProjectControlBar {
