@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="618px" height="1051px" viewBox="0 0 618 1051" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="18" font-family="Lato-Regular, Lato" font-weight="normal">
+        <g id="Group" transform="translate(0.000000, -4.000000)">
+            <text id="const-isLocalhost-=">
+                <tspan x="0" y="18" fill="#9013FE">const</tspan>
+                <tspan x="42.948" y="18" fill="#676767"> </tspan>
+                <tspan x="46.422" y="18" fill="#4A90E2">isLocalhost</tspan>
+                <tspan x="134.46" y="18" fill="#676767"> </tspan>
+                <tspan x="137.934" y="18" fill="#9013FE">=</tspan>
+                <tspan x="148.374" y="18" fill="#676767"> </tspan>
+                <tspan x="151.848" y="18" fill="#F5A623">Boolean(</tspan>
+                <tspan x="222.084" y="18" fill="#676767"></tspan>
+                <tspan x="0" y="40" fill="#7F8C8D">  window.location.hostname </tspan>
+                <tspan x="221.13" y="40" fill="#9013FE">===</tspan>
+                <tspan x="252.45" y="40" fill="#676767"> </tspan>
+                <tspan x="255.924" y="40" fill="#7ED321">'localhost'</tspan>
+                <tspan x="335.502" y="40" fill="#676767"> ||</tspan>
+                <tspan x="0" y="62" fill="#676767">   </tspan>
+                <tspan x="10.422" y="62" fill="#7F8C8D"> window.location.hostname </tspan>
+                <tspan x="228.078" y="62" fill="#9013FE">===</tspan>
+                <tspan x="259.398" y="62" fill="#676767"> </tspan>
+                <tspan x="262.872" y="62" fill="#7ED321">'[::1]'</tspan>
+                <tspan x="301.464" y="62" fill="#676767"> ||</tspan>
+                <tspan x="0" y="84" fill="#7F8C8D">    window.location.hostname.</tspan>
+                <tspan x="228.42" y="84" fill="#4A90E2">match</tspan>
+                <tspan x="277.452" y="84" fill="#9013FE">(</tspan>
+                <tspan x="282.852" y="84" fill="#676767"></tspan>
+                <tspan x="0" y="106" fill="#676767">      </tspan>
+                <tspan x="20.844" y="106" fill="#7ED321">/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/</tspan>
+                <tspan x="441.036" y="106" fill="#676767"></tspan>
+                <tspan x="0" y="128" fill="#676767">   </tspan>
+                <tspan x="10.422" y="128" fill="#9013FE"> )</tspan>
+                <tspan x="19.296" y="128" fill="#676767"></tspan>
+                <tspan x="0" y="150" fill="#F5A623">)</tspan>
+                <tspan x="5.4" y="150" fill="#676767">;</tspan>
+                <tspan x="0" y="172" fill="#676767"></tspan>
+                <tspan x="0" y="194" fill="#50E3C2">export default</tspan>
+                <tspan x="111.366" y="194" fill="#676767"> </tspan>
+                <tspan x="114.84" y="194" fill="#9013FE">function</tspan>
+                <tspan x="180.666" y="194" fill="#676767"> </tspan>
+                <tspan x="184.14" y="194" fill="#4A90E2">register() </tspan>
+                <tspan x="260.118" y="194" fill="#676767">{</tspan>
+                <tspan x="0" y="216" fill="#676767">  </tspan>
+                <tspan x="6.948" y="216" fill="#50E3C2">if</tspan>
+                <tspan x="17.622" y="216" fill="#676767"> </tspan>
+                <tspan x="21.096" y="216" fill="#7F8C8D">(process.env.NODE_ENV</tspan>
+                <tspan x="217.35" y="216" fill="#676767"> </tspan>
+                <tspan x="220.824" y="216" fill="#9013FE">===</tspan>
+                <tspan x="252.144" y="216" fill="#676767"> </tspan>
+                <tspan x="255.618" y="216" fill="#7ED321">'production' </tspan>
+                <tspan x="353.736" y="216" fill="#9013FE">&amp;&amp;</tspan>
+                <tspan x="379.044" y="216" fill="#676767"> </tspan>
+                <tspan x="382.518" y="216" fill="#7ED321">'serviceWorker'</tspan>
+                <tspan x="507.564" y="216" fill="#676767"> </tspan>
+                <tspan x="511.038" y="216" fill="#7F8C8D">in navigator) {</tspan>
+                <tspan x="0" y="238" fill="#7F8C8D">    </tspan>
+                <tspan x="13.896" y="238" fill="#9013FE">const</tspan>
+                <tspan x="56.844" y="238" fill="#7F8C8D"> </tspan>
+                <tspan x="60.318" y="238" fill="#D0021B">publicUrl</tspan>
+                <tspan x="132.948" y="238" fill="#7F8C8D"> = new URL(process.env.PUBLIC_URL, window.location);</tspan>
+                <tspan x="0" y="260" fill="#676767">    </tspan>
+                <tspan x="13.896" y="260" fill="#50E3C2">if (</tspan>
+                <tspan x="33.444" y="260" fill="#7F8C8D">#7f8c8d !== window.location.origin</tspan>
+                <tspan x="312.246" y="260" fill="#50E3C2">) {</tspan>
+                <tspan x="0" y="282" fill="#50E3C2">            return;</tspan>
+                <tspan x="0" y="304" fill="#50E3C2">    }</tspan>
+                <tspan x="19.296" y="304" fill="#676767"></tspan>
+                <tspan x="0" y="326" fill="#676767"></tspan>
+                <tspan x="0" y="348" fill="#676767">    </tspan>
+                <tspan x="13.896" y="348" fill="#676767">window.</tspan>
+                <tspan x="79.416" y="348" fill="#4A90E2">addEventListener</tspan>
+                <tspan x="218.772" y="348" fill="#676767">(</tspan>
+                <tspan x="224.172" y="348" fill="#7ED321">'load'</tspan>
+                <tspan x="264.204" y="348" fill="#676767">, () </tspan>
+                <tspan x="285.768" y="348" fill="#9013FE">=&gt;</tspan>
+                <tspan x="306.648" y="348" fill="#676767"> {</tspan>
+                <tspan x="0" y="370" fill="#676767">      </tspan>
+                <tspan x="20.844" y="370" fill="#9013FE">const</tspan>
+                <tspan x="63.792" y="370" fill="#676767"> </tspan>
+                <tspan x="67.266" y="370" fill="#D0021B">swUrl</tspan>
+                <tspan x="113.868" y="370" fill="#676767"> = </tspan>
+                <tspan x="131.256" y="370" fill="#50E3C2">`${</tspan>
+                <tspan x="152.622" y="370" fill="#7ED321">process.env.</tspan>
+                <tspan x="248.094" y="370" fill="#D0021B">PUBLIC_URL</tspan>
+                <tspan x="352.062" y="370" fill="#676767">}</tspan>
+                <tspan x="357.462" y="370" fill="#7ED321">/service-worker.js`</tspan>
+                <tspan x="502.794" y="370" fill="#676767">;</tspan>
+                <tspan x="0" y="392" fill="#676767"></tspan>
+                <tspan x="0" y="414" fill="#676767">      </tspan>
+                <tspan x="20.844" y="414" fill="#50E3C2">if</tspan>
+                <tspan x="31.518" y="414" fill="#676767"> (</tspan>
+                <tspan x="40.392" y="414" fill="#676767">isLocalhost) {</tspan>
+                <tspan x="0" y="436" fill="#676767">        </tspan>
+                <tspan x="27.792" y="436" fill="#4A90E2">checkValidServiceWorker</tspan>
+                <tspan x="231.57" y="436" fill="#676767">(swUrl);</tspan>
+                <tspan x="0" y="458" fill="#676767">      } </tspan>
+                <tspan x="29.718" y="458" fill="#50E3C2">else</tspan>
+                <tspan x="61.002" y="458" fill="#676767"> {</tspan>
+                <tspan x="69.876" y="458" fill="#676767"></tspan>
+                <tspan x="0" y="480" fill="#676767">        </tspan>
+                <tspan x="27.792" y="480" fill="#4A90E2">registerValidSW</tspan>
+                <tspan x="156.978" y="480" fill="#676767">(swUrl);</tspan>
+                <tspan x="218.916" y="480" fill="#676767"></tspan>
+                <tspan x="0" y="502" fill="#676767">      }</tspan>
+                <tspan x="26.244" y="502" fill="#676767"></tspan>
+                <tspan x="0" y="524" fill="#676767">    });</tspan>
+                <tspan x="29.232" y="524" fill="#676767"></tspan>
+                <tspan x="0" y="546" fill="#676767">  }</tspan>
+                <tspan x="0" y="568" fill="#676767">}</tspan>
+                <tspan x="0" y="590" fill="#676767"></tspan>
+                <tspan x="0" y="612" fill="#9013FE">function</tspan>
+                <tspan x="65.826" y="612" fill="#676767"> </tspan>
+                <tspan x="69.3" y="612" fill="#4A90E2">registerValidSW</tspan>
+                <tspan x="198.486" y="612" fill="#676767">(</tspan>
+                <tspan x="203.886" y="612" fill="#D0021B">swUrl</tspan>
+                <tspan x="250.488" y="612" fill="#676767">) {</tspan>
+                <tspan x="0" y="634" fill="#676767">  navigator.serviceWorker</tspan>
+                <tspan x="0" y="656" fill="#676767">    .</tspan>
+                <tspan x="17.712" y="656" fill="#4A90E2">register</tspan>
+                <tspan x="79.416" y="656" fill="#676767">(swUrl)</tspan>
+                <tspan x="0" y="678" fill="#676767">    .</tspan>
+                <tspan x="17.712" y="678" fill="#4A90E2">then</tspan>
+                <tspan x="53.874" y="678" fill="#676767">(</tspan>
+                <tspan x="59.274" y="678" fill="#D0021B">registration</tspan>
+                <tspan x="151.668" y="678" fill="#676767"> </tspan>
+                <tspan x="155.142" y="678" fill="#9013FE">=&gt;</tspan>
+                <tspan x="176.022" y="678" fill="#676767"> {</tspan>
+                <tspan x="0" y="700" fill="#676767">      </tspan>
+                <tspan x="20.844" y="700" fill="#676767">registration.</tspan>
+                <tspan x="117.054" y="700" fill="#4A90E2">onupdatefound</tspan>
+                <tspan x="238.5" y="700" fill="#676767"> = () </tspan>
+                <tspan x="270.162" y="700" fill="#9013FE">=&gt;</tspan>
+                <tspan x="291.042" y="700" fill="#676767"> {</tspan>
+                <tspan x="0" y="722" fill="#676767">        </tspan>
+                <tspan x="27.792" y="722" fill="#9013FE">const</tspan>
+                <tspan x="70.74" y="722" fill="#676767"> </tspan>
+                <tspan x="74.214" y="722" fill="#D0021B">installingWorker</tspan>
+                <tspan x="206.406" y="722" fill="#676767"> = registration.installing;</tspan>
+                <tspan x="0" y="744" fill="#676767">        </tspan>
+                <tspan x="27.792" y="744" fill="#676767">installingWorker.</tspan>
+                <tspan x="162.612" y="744" fill="#4A90E2">onstatechange</tspan>
+                <tspan x="278.604" y="744" fill="#676767"> </tspan>
+                <tspan x="282.078" y="744" fill="#676767">= () </tspan>
+                <tspan x="310.266" y="744" fill="#9013FE">=&gt;</tspan>
+                <tspan x="331.146" y="744" fill="#676767"> {</tspan>
+                <tspan x="0" y="766" fill="#676767">         </tspan>
+                <tspan x="31.266" y="766" fill="#50E3C2"> if</tspan>
+                <tspan x="45.414" y="766" fill="#676767"> (installingWorker.state </tspan>
+                <tspan x="232.38" y="766" fill="#9013FE">===</tspan>
+                <tspan x="263.7" y="766" fill="#676767"> </tspan>
+                <tspan x="267.174" y="766" fill="#7ED321">'installed'</tspan>
+                <tspan x="342.432" y="766" fill="#676767">) {</tspan>
+                <tspan x="0" y="788" fill="#676767">           </tspan>
+                <tspan x="38.214" y="788" fill="#50E3C2"> if</tspan>
+                <tspan x="52.362" y="788" fill="#676767"> (navigator.serviceWorker.controller) {</tspan>
+                <tspan x="0" y="810" fill="#676767">            </tspan>
+                <tspan x="41.688" y="810" fill="#F5A623">  console.</tspan>
+                <tspan x="112.734" y="810" fill="#4A90E2">log</tspan>
+                <tspan x="136.548" y="810" fill="#676767">(</tspan>
+                <tspan x="141.948" y="810" fill="#7ED321">'New content is available; please refresh.'</tspan>
+                <tspan x="461.664" y="810" fill="#676767">);</tspan>
+                <tspan x="0" y="832" fill="#676767">            } </tspan>
+                <tspan x="50.562" y="832" fill="#50E3C2">else</tspan>
+                <tspan x="81.846" y="832" fill="#676767"> {</tspan>
+                <tspan x="0" y="854" fill="#676767">              </tspan>
+                <tspan x="48.636" y="854" fill="#F5A623">console.</tspan>
+                <tspan x="112.734" y="854" fill="#4A90E2">log</tspan>
+                <tspan x="136.548" y="854" fill="#F5A623">(</tspan>
+                <tspan x="141.948" y="854" fill="#7ED321">'Content is cached for offline use.'</tspan>
+                <tspan x="403.416" y="854" fill="#676767">);</tspan>
+                <tspan x="0" y="876" fill="#676767">            }</tspan>
+                <tspan x="47.088" y="876" fill="#676767"></tspan>
+                <tspan x="0" y="898" fill="#676767">          }</tspan>
+                <tspan x="40.14" y="898" fill="#676767"></tspan>
+                <tspan x="0" y="920" fill="#676767">        };</tspan>
+                <tspan x="0" y="942" fill="#676767">      };</tspan>
+                <tspan x="0" y="964" fill="#676767">    })</tspan>
+                <tspan x="0" y="986" fill="#676767">    .</tspan>
+                <tspan x="17.712" y="986" fill="#4A90E2">catch</tspan>
+                <tspan x="60.372" y="986" fill="#676767">(</tspan>
+                <tspan x="65.484" y="986" fill="#D0021B">error</tspan>
+                <tspan x="106.686" y="986" fill="#676767"> </tspan>
+                <tspan x="110.16" y="986" fill="#9013FE">=&gt;</tspan>
+                <tspan x="131.04" y="986" fill="#676767"> {</tspan>
+                <tspan x="0" y="1008" fill="#676767">      </tspan>
+                <tspan x="20.844" y="1008" fill="#F5A623">console.</tspan>
+                <tspan x="84.942" y="1008" fill="#4A90E2">error</tspan>
+                <tspan x="126.144" y="1008" fill="#676767">(</tspan>
+                <tspan x="131.544" y="1008" fill="#7ED321">'Error during service worker registration:</tspan>
+                <tspan x="452.664" y="1008" fill="#676767">', error);</tspan>
+                <tspan x="0" y="1030" fill="#676767">    });</tspan>
+                <tspan x="0" y="1052" fill="#676767">}</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

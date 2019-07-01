@@ -11,8 +11,15 @@ import FileExplorerTheme from 'react-sortable-tree-theme-file-explorer';
 import './App.css'
 
 import logo from './images/saros_logo.png';
-import codeImage from  './images/code.png';
+import codeImage from  './images/code.svg';
 import cheatsheet from './images/cheatsheet.png';
+
+import image1 from './images/file_explorer_1.png';
+import image2 from './images/file_explorer_2.png';
+import image3 from './images/file_explorer_3.png';
+import image4 from './images/file_explorer_4.png';
+import image5 from './images/file_explorer_5.png';
+import image6 from './images/file_explorer_6.png';
 
 class App extends Component {
   constructor(props) {
@@ -80,6 +87,25 @@ class App extends Component {
       });
     }
 
+    const returnImages = (counter) => {
+      switch (counter) {
+        case 1: 
+          return image1;
+        case 2: 
+          return image2;
+        case 3: 
+          return image3;
+        case 4: 
+          return image4;
+        case 5:
+          return image5;
+        case 6:
+          return image6;
+        default:
+          return toggleModal();
+      }
+    }
+
     const backImage = () => {
       this.setState({
         image_counter: this.state.image_counter - 1
@@ -104,7 +130,7 @@ class App extends Component {
                 <div className="MergeProjectHeader--CloseButton" onClick={toggleModal}>X</div>
               </div>
               <div className="MergeProjectContent">
-                <img onClick={nextImage} className="CounterImageSize" src={`https://ucd-hifi-prototype.s3.eu-central-1.amazonaws.com/images/counter_${this.state.image_counter}.png`} alt="asdasd"></img>
+                <img onClick={nextImage} className="CounterImageSize" src={returnImages(this.state.image_counter)} alt="asdasd"></img>
               </div>
               <div className="MergeProjectControlBar">
                 <button onClick={backImage} className="MergeProjectControlBar--Button">Back</button>
@@ -167,6 +193,7 @@ class App extends Component {
         </div>
         <div className="Content">
           <div className="ProjectExplorer">
+            <label className="Column--Titel">File Explorer</label>
             <SortableTree
             treeData={this.state.treeData}
             onChange={treeData => this.setState({ treeData })}
@@ -174,11 +201,11 @@ class App extends Component {
           />
           </div>
           <div className="TextEditor">
+            <label className="Column--Titel">Code Editor</label>
             <img className="CodeImage" alt="Some Java Code Text" src={codeImage} />
           </div>
           <div className="Window">
-            {this.state.show_tooltip && (<img className="CheatsheetImage" src={cheatsheet}></img>)}
-            
+            {this.state.show_tooltip && (<img className="CheatsheetImage" alt="Cheatsheet" src={cheatsheet}></img>)}
           </div>
         </div>
         <div className="Terminal--Container">

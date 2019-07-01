@@ -1,6 +1,6 @@
 
 .App {
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .SarosMenu--Logo {
@@ -11,13 +11,13 @@
 .Menu {
   width: 100%;
   height: 30px;
-  background-color: #1C1F2B;
+  background-color: #ecf0f1;
   border-bottom: 1px solid #2c3e50;
   display: flex;
 }
 
 .Menu--Entries {
-  color: rgba(190, 190, 190, 0.774);
+  color: #7f8c8d;
   margin: auto 0px auto 15px;
   background-color: transparent;
   border: none;
@@ -26,13 +26,13 @@
 }
 
 .Menu--Entries:hover {
-  color: white;
+  color: black;
 } 
 
 .SecondaryMenu {
   width: 100%;
   height: 50px;
-  background-color: #1C1F2B;
+  background-color: #ecf0f1;
   border-bottom: 1px solid #2c3e50;
   display: flex;
   align-items: center;
@@ -49,9 +49,9 @@
 }
 
 .MergeProjectModal {
-  height: 425px;
-  width: 800px;
-  background-color:#282b3a;
+  height: 595px;
+  width: 1000px;
+  background-color:#ecf0f1;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -62,11 +62,12 @@
 }
 
 .MergeProjectHeader {
-  background-color: #2c3e50;
-  color: white;
+  background-color: #ecf0f1;
+  color: #7f8c8d;
   display: flex;
-  height: 30px;
+  height: 35px;
   justify-content: space-between;
+  border-bottom: 1px solid #7f8c8d;
 }
 
 .MergeProjectHeader--Text {
@@ -85,12 +86,12 @@
   overflow-x: hidden;
   overflow-y: auto;
   color: white;
-  height: 345px;
+  height: 510px;
 }
 
 .MergeProjectControlBar {
   height: 50px;
-  border-top: 1px solid #2c3e50;
+  border-top: 1px solid #7f8c8d;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -98,12 +99,13 @@
 }
 
 .CounterImageSize {
-  max-width: 790px;
+  max-width: 990px;
   min-width: 790px;
 }  
 
 .CheatsheetImage {
   width: 100%;
+  padding: 50px;
 }
 
 .MergeProjectControlBar--Button {
@@ -113,13 +115,13 @@
   border: none;
   align-content: center;
   margin: 15px;
-  color: white;
+  color: #7f8c8d;
 }
 
 .ui.button.SecondaryMenu--Button-blue {
-  color: #4EABFF;
+  color: white;
   margin-left: 15px;
-  background-color: #282b3a;
+  background-color: #bdc3c7;
   height: 32px;
   width: 40px;
   padding: 0;
@@ -142,7 +144,7 @@
 }
 
 .ProjectExplorer {
-  background-color: #1C1F2B;
+  background-color: #ecf0f1;
   height: 100%;
   border-right: 1px solid #2c3e50; 
   -webkit-background-size: cover;
@@ -157,11 +159,11 @@
   text-align: end;
   margin-left: 25px;
   margin: auto 0px auto 5px;
-  color: rgba(190, 190, 190, 0.774);
+  color: #7f8c8d;
 }
 
 .ui.dropdown:hover {
-  color: white;
+  color: black;
 }
 
 i.dropdown.icon {
@@ -171,8 +173,8 @@ i.dropdown.icon {
 .menu.transition.visible {
   margin-left: 25px;
   margin-top: 5px;
-  background-color: #282b3a;
-  color: white;
+  background-color: #ecf0f1;
+  color: #7f8c8d;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   border-radius: 0px;
   border: 1px solid #2c3e50;
@@ -183,11 +185,11 @@ i.dropdown.icon {
 }
 
 .ui.dropdown .menu>.item {
-  color: white;
+  color: #7f8c8d;
 }
 
 .ui.dropdown .menu>.item:hover {
-  color: white;
+  color: black;
 }
 
 .ui.dropdown .menu>.divider {
@@ -195,25 +197,31 @@ i.dropdown.icon {
 }
 
 .TextEditor {
-  padding: 25px;
-  background-color: #1C1F2B;
+  background-color: #ecf0f1;
   border-right: 1px solid #2c3e50;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
 .CodeImage {
-  width: 70%;
+  margin-top: 10px;
+  padding: 25px;
+  width: 50%;
+}
+
+.Column--Titel {
+  margin: 5px 0 0px 5px;
+  position: absolute;
 }
 
 .Window {
   overflow: auto;
-  background-color: #1C1F2B;
+  background-color: #ecf0f1;
 }
 
 .Terminal--Container {
   border-top: 1px solid #2c3e50;
-  background-color: #1C1F2B;
+  background-color: #ecf0f1;
   display: "flex";
   justify-content: "center";
   align-items: "center";
@@ -228,7 +236,7 @@ i.dropdown.icon {
 .eMQnPI {
   max-width: 100vw !important;
   width: 100vw !important;
-  background-color: #1C1F2B !important;
+  background-color: #ecf0f1 !important;
 }
 
 .blCJWW {
@@ -246,18 +254,23 @@ i.dropdown.icon {
 }
 
 .ghCJNo {
-  background-color: #13151b !important;
+  background-color: #7f8c8d !important;
 }
 
 .iWWnLG {
-  background-color: #1C1F2B  !important;
-  border-bottom: 2px solid #1C1F2B  !important;
+  color: #7f8c8d;
+  background-color: #ecf0f1  !important;
+  border-bottom: 2px solid #ecf0f1  !important;
   font-size: 0.8em !important;
   font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
 }
 
 .fSkAOT, .fSkAOT:focus {
-  background: #1C1F2B !important;
+  background: #ecf0f1 !important;
+}
+
+.rstcustom__rowLabel {
+  color: #7f8c8d;
 }
 
 /** Inactive Tabs **/
@@ -266,7 +279,11 @@ i.dropdown.icon {
 }
 
 .sc-jzJRlG.cAmmaS {
-  color: white !important;
+  color: #7f8c8d !important;
+}
+
+.sc-kAzzGY.hjGnyC {
+  color: #cce2ff !important;
 }
 
 .sc-cSHVUG.cFaXHK {
@@ -275,6 +292,12 @@ i.dropdown.icon {
 
 .ihWlDo {
   font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+  color: #7f8c8d;
+}
+
+.sc-iwsKbI.fSkAOT {
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+  color: #7f8c8d;
 }
 
 
@@ -282,6 +305,7 @@ i.dropdown.icon {
 .rst__tree {
   font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
   color: white;
+  margin-top: 10px;
   padding: 15px;
   font-display: 
 }
