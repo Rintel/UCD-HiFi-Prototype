@@ -11,7 +11,7 @@ import FileExplorerTheme from 'react-sortable-tree-theme-file-explorer';
 import './App.css'
 
 import logo from './images/saros_logo.png';
-import codeImage from  './images/code.svg';
+import codeImage from  './images/code.png';
 import cheatsheet from './images/cheatsheet.png';
 
 import image1 from './images/file_explorer_1.png';
@@ -20,6 +20,8 @@ import image3 from './images/file_explorer_3.png';
 import image4 from './images/file_explorer_4.png';
 import image5 from './images/file_explorer_5.png';
 import image6 from './images/file_explorer_6.png';
+import loadingSpinner from './images/loading_spinner.gif';
+
 
 class App extends Component {
   constructor(props) {
@@ -130,12 +132,13 @@ class App extends Component {
                 <div className="MergeProjectHeader--CloseButton" onClick={toggleModal}>X</div>
               </div>
               <div className="MergeProjectContent">
+               {this.state.image_counter === 3 ? <img className="LoadingSpinner" alt="spinner" src={loadingSpinner} /> : null }
                 <img onClick={nextImage} className="CounterImageSize" src={returnImages(this.state.image_counter)} alt="asdasd"></img>
               </div>
               <div className="MergeProjectControlBar">
-                <button onClick={backImage} className="MergeProjectControlBar--Button">Back</button>
-                <button className="MergeProjectControlBar--Button" onClick={nextImage}>Next</button>
-                <button className="MergeProjectControlBar--Button">Finish</button>
+                <button onClick={backImage} className={`MergeProjectControlBar--Button ${this.state.image_counter > 1 ? '' : 'disabled'}`}>Back</button>
+                <button className={`MergeProjectControlBar--Button ${this.state.image_counter === 6 ? 'disabled' : ''}`} onClick={nextImage}>Next</button>
+                <button className={`MergeProjectControlBar--Button ${this.state.image_counter !== 6 ? 'disabled' : ''}`}>Finish</button>
                 <button onClick={toggleModal} className="MergeProjectControlBar--Button">Cancel</button>
               </div>
             </div>
@@ -190,6 +193,28 @@ class App extends Component {
           <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
             <FontAwesomeIcon icon={faCut} />
           </Button>
+          
+                    <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+                    <FontAwesomeIcon icon={faPlay} />
+                  </Button>
+                  <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+                    <FontAwesomeIcon icon={faPlus} />
+                  </Button>
+                  <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={() => window.location.reload()}>
+                    <FontAwesomeIcon icon={faSync} />
+                  </Button>
+                  <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+                    <FontAwesomeIcon icon={faTrash} />
+                  </Button>
+                  <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+                    <FontAwesomeIcon icon={faCopy} />
+                  </Button>
+                  <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+                    <FontAwesomeIcon icon={faPaste} />
+                  </Button>
+                  <Button className="ui button SecondaryMenu--Button SecondaryMenu--Button-blue" onClick={doSomething}>
+                    <FontAwesomeIcon icon={faCut} />
+                  </Button>
         </div>
         <div className="Content">
           <div className="ProjectExplorer">
@@ -218,12 +243,14 @@ class App extends Component {
               commands={{
                 'open-google': () => window.open('https://www.google.com/', '_blank'),
                 'hey': () => alert("Hey, what's up?"),
+                'merge-projects': () => toggleModal(),
                 authors: authors,
               }}
               descriptions={{
                 'open-google': 'opens google.com',
                 'hey': 'Greets you hehe',
-                'authors': "Displays the names of the great creators of this project" 
+                'authors': "Displays the names of the great creators of this project",
+                'merge-projects': "Starts the Saros Merge Project(s) assistant"
               }}
               msg='[INFO] Willkommen beim Saros Web IDE...'
             />
