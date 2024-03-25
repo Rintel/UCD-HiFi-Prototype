@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "release:ci": "semantic-release"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +39,35 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "release": {
+    "branches": [
+        "master"
+    ],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
+        "@semantic-release/github",
+        "@semantic-release/git"
+    ],
+    "prepare": [
+        "@semantic-release/changelog",
+        "@semantic-release/npm",
+        {
+            "path": "@semantic-release/git",
+            "assets": [
+                "package.json",
+                "yarn.lock",
+                "CHANGELOG.md"
+            ],
+            "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+    ],
+    "options": {
+        "commitParserOptions": {
+            "headerPattern": "^([A-Z]{3,}-\\d{1,5}):? (chore|build|ci|docs|feat|fix|perf|refactor|test)(?:\\(([\\w-]+)\\))?\\S* (.+)$"
+        }
+    } 
   }
 }
