@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Rintel/UCD-HiFi-Prototype/compare/v1.0.0...v1.0.1) (2024-03-25)
+
+
+### Bug Fixes
+
+* remove PR step ([c28c8c7](https://github.com/Rintel/UCD-HiFi-Prototype/commit/c28c8c730cefcefecd1cb2e7f209eb4466d68476))
+
 # 1.0.0 (2024-03-25)
 
 
