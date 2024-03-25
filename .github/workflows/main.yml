@@ -22,6 +22,15 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: release new version'
+          title: 'chore: release new version'
+          body: 'New version has been released by the CI.'
+          branch: 'release/new-version'
+
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
